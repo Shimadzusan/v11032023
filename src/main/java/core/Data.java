@@ -9,7 +9,7 @@ public class Data {
 		int number = userJson.getInt("a");
 		int result = number * number;
 		System.out.println(result);
-		String responseFromServer = "{\"response\":" + result + "}";
+		String responseFromServer = "{\"responseee\":" + result + "}";
 		System.out.println(responseFromServer);
 		return responseFromServer;
 	}

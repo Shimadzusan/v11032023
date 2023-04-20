@@ -5,7 +5,7 @@ import org.json.JSONObject;
 public class Start {
 
 	public static void main(String[] args) throws ClassNotFoundException {
-		String s = "{\"a\":12}";
+		String s = "{\"a\":14}";
 		System.out.println(s);
 		
 		JSONObject userJson = new JSONObject(s);

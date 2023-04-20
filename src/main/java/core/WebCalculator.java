@@ -27,6 +27,11 @@ public class WebCalculator extends HttpServlet {
 		System.out.println("I am servlet_one ...method GET");
 
 		request.setCharacterEncoding("utf-8");
+		response.setHeader("Access-Control-Allow-Credentials", "true");
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		response.setHeader("Access-Control-Allow-Headers", "*");
+		response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+
 		response.setContentType("text/plain");
 		String data = request.getParameter("group");				//income data from js
 		
@@ -40,6 +45,11 @@ public class WebCalculator extends HttpServlet {
 		System.out.println("I am servlet_two calculator ...method POST");
 		
 		request.setCharacterEncoding("utf-8");
+		response.setHeader("Access-Control-Allow-Credentials", "true");
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		response.setHeader("Access-Control-Allow-Headers", "*");
+		response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+
 		response.setContentType("text/plain");
 		//String data = request.getParameter("name");
 		

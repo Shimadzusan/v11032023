@@ -23,6 +23,11 @@ public class WebDataCollector extends HttpServlet {
 
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/plain");
+		response.setHeader("Access-Control-Allow-Credentials", "true");
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		response.setHeader("Access-Control-Allow-Headers", "*");
+		response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+
 		String data = request.getParameter("group");				//income data from js
 		
 		response.getWriter().write(data + " myy note from web..");	//send data to js	
@@ -36,6 +41,11 @@ public class WebDataCollector extends HttpServlet {
 		
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/plain");
+		response.setHeader("Access-Control-Allow-Credentials", "true");
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		response.setHeader("Access-Control-Allow-Headers", "*");
+		response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+
 		String data = request.getParameter("name");
 		response.getWriter().write(data + " my note from web ...");
 		String data2 = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
